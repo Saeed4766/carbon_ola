@@ -5,7 +5,7 @@ import Header from '../header';
 
 const Container = ({children}) => {
   return (
-    <div className="flex">
+    <div className="flex font-Poppins">
       <div className="w-[20%] sm:w-full">
         <SideNav />
       </div>
