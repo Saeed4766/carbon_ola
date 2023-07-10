@@ -1,7 +1,9 @@
 import React from "react";
 // import Header from "./header";
-import walletCard from "../assets/walletCard.png";
 import DataTable from "react-data-table-component";
+import {BiWallet} from 'react-icons/bi'
+import {LuMailCheck} from 'react-icons/lu'
+import {MdAddCard} from 'react-icons/md'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -144,12 +146,32 @@ const Main = () => {
 
   return (
     <div>
-      <div className=" px-[2rem]">
-        <div className="flex justify-between gap-5">
-          <div className="w-[50%] my-[2rem] shadow-xl">
-            <img src={walletCard} alt="walletCard"  />
+      <div className=" px-[2rem] sm:px-3">
+        <div className="flex justify-between gap-5 sm:flex sm:flex-col md:flex md:flex-col">
+          
+          <div className="w-[50%] my-[2rem] bg-walletCardBG bg-cover bg-no-repeat shadow-xl rounded-lg px-[1rem] sm:w-full md:w-full">
+            <div className="flex flex-col items-center text-white py-[3rem] rounded-lg my-[2rem] bg-walletBG bg-cover bg-no-repeat h-fit">
+              <p className="text-2xl">Wallet Balance (NGN)</p>
+              <p className="text-2xl font-bold leading-loose">10,000.00</p>
+            </div>
+            <div className="flex justify-center items-center gap-[5rem] text-white">
+                <div className="flex flex-col justify-center items-center sm:w-[5rem]">
+                  <div className="flex justify-center items-center  bg-[#8237f7] rounded-[50%] w-[3rem] h-[3rem]"><MdAddCard/></div>
+                  <p className="text-[#8237f7] font-bold">Top up</p>
+                </div>
+                <div className="flex flex-col justify-center items-center sm:w-[5rem]">
+                  <div className="flex justify-center items-center  bg-[#8237f7] rounded-[50%] w-[3rem] h-[3rem]"><LuMailCheck/></div>
+                  <p className="text-[#8237f7] font-bold">Send</p>
+                </div>
+                <div className="flex flex-col justify-center items-center sm:w-[5rem]">
+                <div className="flex justify-center items-center  bg-[#8237f7] rounded-[50%] w-[3rem] h-[3rem]"><BiWallet/></div>
+                <p className="text-[#8237f7] font-bold">Withdraw</p>
+                </div>
+              </div>
           </div>
-          <div className="w-[50%] pb-[3rem] p-[1rem] my-[2rem] h-[20rem] rounded-lg bg-white shadow-xl">
+
+          <div className="w-[50%] pb-[3rem] p-[1rem] my-[2rem] h-[20rem] rounded-lg
+           bg-white shadow-xl md:w-full  sm:w-full sm:p-[.4rem] sm:pb-[3rem]  ">
             <p className="text-lg font-bold">Carbon Stats</p>
             <Doughnut
               data={dataChart}
@@ -159,7 +181,8 @@ const Main = () => {
             />
           </div>
         </div>
-        <div className="my-[4rem] hover:bg-[#d7ecfb]">
+
+        <div className="my-[4rem] hover:bg-[#d7ecfb] sm:w-full">
           <DataTable className="bg-red-700" columns={columns} data={data} customStyles={customStyles} />
         </div>
       </div>

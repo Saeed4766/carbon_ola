@@ -19,28 +19,41 @@ import ComplaintBoard from './pages/complaint_board/ComplaintBoard';
 
 
 
-
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     // element: 
+//   },
+//   {
+//     path: "/activity",
+//     element: <Activity/>,
+//   },
+//   {
+//     path: "/bill",
+//     element: <Bills/>,
+//   },
+//   {
+//     path: "/transactions",
+//     element: <Transactions/>,
+//   },
+//   {
+//     path: "/complaints",
+//     element: <Complaints/>,
+//   },
+//   {
+//     path: "/settings",
+//     element: <Settings/>,
+//   },
+//   {
+//     path: "/logout",
+//     element: <Dashboard/>,
+//   },
+// ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <Dashboard/> */}
-    {/* <LandingPage/> */}
-    {/* <Login/> */}
-    {/* <SignUp/> */}
-    <SettingBoard/>
-    {/* <UtilityDash/> */}
-    {/* <AirtimeDash/> */}
-    {/* <CableDash/> */}
-    {/* <InternetDash/> */}
-    {/* <HotelBookings/> */}
-    {/* <VerifyDash/> */}
-    {/* <ComplaintBoard/> */}
-    
-    
-    
-    
-  
+    <Dashboard/>
   </React.StrictMode>
 );
 

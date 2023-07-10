@@ -8,7 +8,6 @@ const Dashboard = () => {
   
   return (
     <Container>
-
         <Main/>
     </Container>
    

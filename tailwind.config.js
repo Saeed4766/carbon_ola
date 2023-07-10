@@ -6,20 +6,20 @@ module.exports = {
   theme: {
     extend: {
 
-      backgroundImage:{
-        'frame': "url('/src/assets/Frame.png')",
-        'mainBG': "url('/src/assets/mainBG.png')",
-        'LoginPana': "url('/src/assets/LoginPana.png');",
-        'signUp_bg': "url('/src/assets/signUp_bg.png');",
-        'landingBG': "url('/src/assets/landingBG.png')",
-        'otpBg': "url('/src/assets/otpBg.png')",
-        'compBg': "url('/src/assets/compBg.png')"
-      },
-
       screens: {
         md: { min: "415px", max: "800px" },
 
         sm: { max: "414px" }
+      },
+      
+      fontFamily: {
+        Poppins: ["Poppins", "sans-serif"]
+      },
+      
+
+      backgroundImage:{
+        'frame': "url('/src/assets/Frame.png')",
+        'mainBG': "url('/src/assets/mainBG.png')"
       }
 
     },
