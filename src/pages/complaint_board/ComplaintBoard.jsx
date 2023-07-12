@@ -6,12 +6,12 @@ const ComplaintBoard = () => {
   return (
     <Container>
       <div className="bg-compBg bg-cover bg-no-repeat h-screen">
-        <div className="bg-[#600aff] text-white mb-5 px-5">
+        <div className="bg-[#600aff] text-white mb-5 px-5 sm:px-0 sm:w-[85%] sm:mx-7">
           <h3 className="">Complaints</h3>
         </div>
 
         <form className="font-semibold">
-          <div className="flex w-full justify-between px-7 gap-[4rem]">
+          <div className="flex w-full sm:flex-col justify-between px-7 gap-[4rem] sm:gap-[1rem]">
             <div className="flex flex-col w-full">
               <label htmlFor="" className="">
                 Name
@@ -43,14 +43,14 @@ const ComplaintBoard = () => {
             <p className="font-normal">Subscribe to our Newsletter</p>
           </div>
 
-          <div className="px-7 mt-3 flex justify-end">
+          <div className="px-7 mt-3 flex justify-end sm:justify-start">
             <button className="bg-[#2b007a] text-sm font-bold text-[#dbd9dd] rounded-[5px] py-1.5 px-5">
               Send
             </button>
           </div>
         </form>
 
-        <div className="bg-[#600aff] text-white mt-5 px-5">
+        <div className="bg-[#600aff] text-white mt-5 px-5 sm:w-[85%] sm:mx-7">
           <h3 className="">Frequently asked question</h3>
         </div>
 

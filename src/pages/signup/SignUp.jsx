@@ -55,7 +55,7 @@ const SignUp = () => {
                     <div className="flex flex-col w-full">
                         <label htmlFor="surname" className="text-[10.5px] font-semibold">PIN</label>
                         <input 
-                        type="PIN" 
+                        type="password" 
                         placeholder="PIN" 
                         className="border border-gray-400 text-[10.5px] font-semibold py-3 px-2 w-full rounded-sm" 
                         />
@@ -67,7 +67,7 @@ const SignUp = () => {
                     <div className="flex flex-col w-full">
                         <label htmlFor="Date of Birth" className="text-[10.5px] font-semibold">Date of Birth</label>
                         <input 
-                        type="text" 
+                        type="date" 
                         placeholder="01/01/1996" 
                         className="border border-gray-400 py-2 px-2 w-full text-[10.5px] font-semibold rounded-sm" 
                         />

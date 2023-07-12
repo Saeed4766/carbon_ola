@@ -19,7 +19,8 @@ module.exports = {
 
       backgroundImage:{
         'frame': "url('/src/assets/Frame.png')",
-        'mainBG': "url('/src/assets/mainBG.png')"
+        'mainBG': "url('/src/assets/mainBG.png')",
+        'otpBg' : "url('/src/assets/otpBg.png')"
       }
 
     },

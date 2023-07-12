@@ -48,7 +48,7 @@ const Login = () => {
                     Enter PIN
                   </label>
                   <input
-                    type="pin"
+                    type="password"
                     name="pin"
                     id="pin"
                     placeholder="Enter PIN"

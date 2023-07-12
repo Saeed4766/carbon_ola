@@ -4,17 +4,18 @@ import Container from "../../components/sharedComponent/container";
 const SettingBoard = () => {
   return (
     <Container>
-      <div className=" px-[5rem] py-5">
-        <div className=" flex justify-between items-center px-3 bg-[#600AFF] py-1 text-white ">
+      <div className=" px-[5rem] py-5 sm:px-[1rem]">
+        <div className=" flex justify-between items-center sm:items-start px-3 sm:px-0 sm:w-full sm:gap-3 bg-[#600AFF] py-1 text-white ">
           <p className="">Setting</p>
           <p className="">Profile</p>
           <p className="">Bank</p>
           <p className="">Documentation</p>
         </div>
+
         <form action="" className="font-semibold">
-          <h3 className="pt-4 font-normal">Basic Information</h3>
+          <h3 className="my-4 font-normal">Basic Information</h3>
           <div className="">
-            <div className=" grid grid-cols-2 gap-x-8 gap-y-4 ">
+            <div className=" grid grid-cols-2 sm:grid-cols-1 gap-x-8 gap-y-4 ">
               <div className="grid grid-rows-1">
                 <label htmlFor="title" className="font-semibold">
                   Title
@@ -58,10 +59,10 @@ const SettingBoard = () => {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-4 py-3 gap-6 ">
+            <div className="grid grid-cols-4 sm:grid-cols-2 py-3 gap-6 ">
               <div className="grid grid-rows-1">
                 <label htmlFor="gender">Gender</label>
-                <select name="gender" id="gender" className=" py-3 px-3">
+                <select name="gender" id="gender" className=" border py-3 px-3">
                   <option value="gender" className="">
                     Gender
                   </option>
@@ -74,7 +75,7 @@ const SettingBoard = () => {
                 <select
                   name="maritalstatus"
                   id="maritalstatus"
-                  className="border-2 py-3 px-3 "
+                  className="border py-3 px-3 "
                 >
                   <option value="single" className="">
                     single
@@ -83,14 +84,14 @@ const SettingBoard = () => {
                   <option value="divorce">Divorce</option>
                 </select>
               </div>
-              <div className="grid grid-rows-1">
+              <div className="grid grid-rows-1 sm:grid-cols-1 ">
                 <label htmlFor="Date of Birth">Date of Birth</label>
                 <input
                   type="text"
                   name="Date of Birth"
                   id="Date of Birth"
                   placeholder="01/01/1886"
-                  className="border-2 px-2 py-3"
+                  className="border p-3 sm:w-full"
                 />
               </div>
               <div className="grid grid-rows-1">
@@ -98,7 +99,7 @@ const SettingBoard = () => {
                 <select
                   name="Religion"
                   id="Religion"
-                  className="border-2 py-3 px-3"
+                  className="border p-3 sm:w-full"
                 >
                   <option value="gender" className="">
                     Religion
@@ -109,17 +110,17 @@ const SettingBoard = () => {
               </div>
             </div>
           </div>
-          <div className=" ">
-            <h4 className="py-4 font-normal">Contact Information</h4>
-            <div className="grid grid-cols-2  gap-5">
-              <div className="grid grid-rows-1">
+          <div className="mt-9 ">
+            <h4 className="my-4 font-normal">Contact Information</h4>
+            <div className="grid grid-cols-2  gap-5 ">
+              <div className="grid grid-rows-1 sm:grid-cols-1 ">
                 <label htmlFor="phonenumber">Phone Number</label>
                 <input
                   type="text"
                   name="phonenumber"
                   id="phonenumber"
                   placeholder="Phone Number"
-                  className=" px-2 py-3"
+                  className=" px-2 py-3 "
                 />
               </div>
               <div className="grid grid-rows-1">
@@ -129,7 +130,7 @@ const SettingBoard = () => {
                   name="email"
                   id="email"
                   placeholder="Email Address"
-                  className=" px-2 py-3"
+                  className=" px-2 py-3 sm:w-full"
                 />
               </div>
             </div>
@@ -144,14 +145,14 @@ const SettingBoard = () => {
               />
             </div>
             <div className=" grid grid-cols-2 gap-x-8 gap-y-4  pt-3">
-              <div className="grid grid-rows-1">
-                <label htmlFor="stateoforigin">State of Origin</label>
+              <div className="grid grid-rows-1 ">
+                <label htmlFor="state of origin">State of Origin</label>
                 <input
                   type="text"
-                  name="stateoforigin"
-                  id="stateoforigin"
+                  name="state of origin"
+                  id="state of origin"
                   placeholder="State of Origin"
-                  className="px-2 py-3"
+                  className="px-2 py-3 sm:w-full"
                 />
               </div>
               <div className="grid grid-rows-1">
@@ -161,7 +162,7 @@ const SettingBoard = () => {
                   name="localgovtarea"
                   id="localgovtarea"
                   placeholder="LGA"
-                  className=" px-2 py-3"
+                  className=" px-2 py-3 sm:w-full"
                 />
               </div>
               <div className="grid grid-rows-1">
@@ -170,10 +171,9 @@ const SettingBoard = () => {
                   type="text"
                   name="hometown"
                   id="hometown"
-                  placeholder=""
-                  Home
-                  Town
-                  className="px-2 py-3"
+                  placeholder="Home
+                  Town"
+                  className="px-2 py-3 sm:w-full"
                 />
               </div>
               <div className="grid grid-rows-1">
@@ -183,14 +183,14 @@ const SettingBoard = () => {
                   name="Nationality"
                   id="Nationality"
                   placeholder="Nationality"
-                  className="px-2 py-3"
+                  className="px-2 py-3 sm:w-full"
                 />
               </div>
             </div>
           </div>
-          <div className=" ">
-            <h4 className="py-4 font-normal">Next of Kin</h4>
-            <div className="grid grid-cols-2  gap-5">
+          <div className="my-4 mt-9">
+            <h4 className=" font-normal">Next of Kin</h4>
+            <div className="grid grid-cols-2 my-4  gap-5">
               <div className="grid grid-rows-1">
                 <label htmlFor="firstname">First Name</label>
                 <input
@@ -198,7 +198,7 @@ const SettingBoard = () => {
                   name="firstname"
                   id="firstname"
                   placeholder="First Name"
-                  className=" px-2 py-3"
+                  className=" px-2 py-3 sm:w-full"
                 />
               </div>
               <div className="grid grid-rows-1">
@@ -208,11 +208,11 @@ const SettingBoard = () => {
                   name="lastname"
                   id="lastname"
                   placeholder="Last Name"
-                  className=" px-2 py-3"
+                  className=" px-2 py-3 sm:w-full"
                 />
               </div>
             </div>
-            <div className="grid grid-rows-1 pt-3">
+            <div className="grid grid-rows-1 my-4">
               <label htmlFor="Address">Address</label>
               <input
                 type="text"
@@ -222,7 +222,7 @@ const SettingBoard = () => {
                 className=" px-2 py-3"
               />
             </div>
-            <div className="grid grid-cols-2  gap-5">
+            <div className="grid grid-cols-2 my-4 gap-5">
               <div className="grid grid-rows-1">
                 <label htmlFor="Relationship">Relationship</label>
                 <input
@@ -230,7 +230,7 @@ const SettingBoard = () => {
                   name="Relationship"
                   id="Relationship"
                   placeholder="Relationship"
-                  className=" px-2 py-3"
+                  className=" px-2 py-3 sm:w-full"
                 />
               </div>
               <div className="grid grid-rows-1">
@@ -240,14 +240,14 @@ const SettingBoard = () => {
                   name="email"
                   id="email"
                   placeholder="Email Address"
-                  className=" px-2 py-3"
+                  className=" px-2 py-3 sm:w-full"
                 />
               </div>
             </div>
           </div>
-          <div className=" py-3 ">
-            <h4>Empolyment</h4>
-            <div className="grid grid-cols-2  gap-5 pt-3">
+          <div className=" mt-9">
+            <h4 className="font-normal">Empolyment</h4>
+            <div className="grid grid-cols-2 my-4  gap-5">
               <div className="grid grid-rows-1">
                 <label htmlFor="Occupation">Occupation</label>
                 <input
@@ -255,7 +255,7 @@ const SettingBoard = () => {
                   name="Occupation"
                   id="Occupation"
                   placeholder="Occupation"
-                  className=" px-2 py-3"
+                  className=" px-2 py-3 sm:w-full"
                 />
               </div>
               <div className="grid grid-rows-1">
@@ -265,11 +265,11 @@ const SettingBoard = () => {
                   name="Employer"
                   id="Employer"
                   placeholder="Employer"
-                  className=" px-2 py-3"
+                  className=" px-2 py-3 sm:w-full"
                 />
               </div>
             </div>
-            <div className="grid grid-rows-1 pt-3">
+            <div className="grid grid-rows-1">
               <label htmlFor=" Employer's Address">Employer's Address </label>
               <input
                 type="text"
@@ -280,9 +280,9 @@ const SettingBoard = () => {
               />
             </div>
           </div>
-          <div className="pt-3 font-normal">
+          <div className="mt-9 font-normal">
             <h4>Identity</h4>
-            <div className="grid grid-cols-2  gap-5 pt-3">
+            <div className="grid grid-cols-2 my-4 gap-5 font-semibold ">
               <div className="grid grid-rows-1">
                 <label htmlFor="BVN">BVN</label>
                 <input
@@ -290,17 +290,17 @@ const SettingBoard = () => {
                   name="BVN"
                   id="BVN"
                   placeholder="BVN"
-                  className=" px-2 py-3"
+                  className=" px-2 py-3 sm:w-full"
                 />
               </div>
-              <div className="grid grid-rows-1">
+              <div className="grid grid-rows-1 ">
                 <label htmlFor="I.D Number">I.D Number</label>
                 <input
                   type="text"
                   name="I.D Number"
                   id="I.D Number"
                   placeholder="I.D Number"
-                  className=" px-2 py-3"
+                  className=" px-2 py-3 sm:w-full"
                 />
               </div>
             </div>
