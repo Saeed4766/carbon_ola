@@ -1,9 +1,21 @@
 import React, { useState } from "react";
 import OtpInput from "react-otp-input";
 import Sharednav from "../landing_page/Sharednav";
+import { useForm } from "../postcontext/formcontext/Form";
+import axios from "axios";
 
 const VerifyDash = () => {
+  const {state}= useForm()
   const [otp, setOtp] = useState("");
+  const email = state.email
+  function sendOtp(){
+    axios.patch(`https://carbon-api-test.azurewebsites.net/api/v1/user/verify/${otp}/${email}`
+    ).then((response)=>{
+      console.log(response.data)
+    }).catch((err)=>{console.log(err)})
+  }
+
+  
 
   return (
     <Sharednav>
@@ -29,7 +41,8 @@ const VerifyDash = () => {
             renderSeparator={<span>-</span>}
             renderInput={(props) => <input {...props} />}
           />
-          <button className="mt-2 bg-[#2B007A] text-white px-8 py-2 rounded-lg font-semibold text-lg">
+          <button type="submit" onClick={sendOtp}
+          className="mt-2 bg-[#2B007A] text-white px-8 py-2 rounded-lg font-semibold text-lg">
             Verify E-mail
           </button>
         </div>

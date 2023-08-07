@@ -11,6 +11,9 @@ import AirtimeDash from "../airtime_dash/AirtimeDash";
 import CableDash from "../cable_dash/CableDash";
 import HotelBookings from "../hotel_bookings/HotelBookings";
 import InternetDash from "../internet_dash/InternetDash";
+// import updateProfile from "../profile/UpdateProfile";
+import Update from "../profile/Update";
+import GetProfiles from "../Login/GetProfiles";
 
 
 
@@ -19,20 +22,24 @@ const Dashboard = () => {
   
   return (
     <div>
-      <LandingPage/>
-      <SettingBoard/>
-      <ComplaintBoard/>
-      <VerifyDash/>
-      <SignUp/>
-      <Login/>
-      <AirtimeDash/>
-      <CableDash/>
-      <HotelBookings/>
-      <InternetDash/>
+      {/* <LandingPage/> */}
+      {/* <SettingBoard/> */}
+      {/* <ComplaintBoard/> */}
+      {/* <VerifyDash/> */}
+      {/* <SignUp/> */}
+      {/* <Login/> */}
+      {/* <AirtimeDash/> */}
+      {/* <CableDash/> */}
+      {/* <HotelBookings/> */}
+      {/* <InternetDash/> */}
+      {/* <updateProfile/> */}
+      {/* <Update/> */}
+      {/* <GetProfiles/> */}
+      
 
-      {/* <Container>
-        <Main/>
-    </Container> */}
+    <Container>
+      <Main/>
+    </Container>
     </div>
    
   );

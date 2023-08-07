@@ -1,13 +1,103 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../../components/sharedComponent/container";
 import Logo from "../../assets/Logo.png";
 import LoginPana from "../../assets/LoginPana.png";
+import { useForm } from "../postcontext/formcontext/Form";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios";
 
 const Login = () => {
+
+const [email, setEmail] = useState('')
+const [password, setPassword] =useState('')
+console.log(email,password)
+
+function getEmail (e){
+    setEmail(e.target.value)
+  }
+
+  function getPassword (e){
+    setPassword(e.target.value)
+  }
+
+ async function handleSubmit(e){
+  try{
+    e.preventDefault()
+    const res = await axios.post("https://carbon-api-test.azurewebsites.net/api/v1/user/login",{
+      email:email,
+      password:password
+    })
+    console.log(res)
+
+    localStorage.setItem("email",JSON.stringify(email))
+    localStorage.setItem('token', res.data.token)
+  } catch(error){
+    console.log(error)
+  }
+   
+  }
+
+  // const { state, dispatch } = useForm();
+
+  // const info = {
+  //   email: state.email,
+  //   password: state.password,
+  // }
+  
+  
+  // function handleSubmit(e){
+  //   e.preventDefault()
+  //   if(
+  //     !info.email ||
+  //     !info.password 
+  //   ) {
+  //     toast.error("Please fill in all fields.")
+  //   }
+
+  //   dispatch({ type: "START_FETCH" });
+
+  //   fetch("https://carbon-api-test.azurewebsites.net/api/v1/user/login",{
+  //     method: "POST",
+  //     body: JSON.stringify(info),
+  //     headers: {
+  //       "Content-type": "application/json; charset=UTF-8",
+  //     },
+  //   })
+
+  //   .then((response) => response.json())
+  //   .then((json)=>{
+  //     console.log(json)
+  //     dispatch({type: 'DATA_FETCHED', payload: json})
+  //   })
+
+  //   .catch((error) => {
+  //     console.log(error);
+  //     toast.error(error.message)
+  //     dispatch({ type: "ERROR" });
+      
+  //   })
+  // }
+  //   function getEmail(e){
+  //     dispatch({
+  //       type: "DATA_FETCHED",
+  //       field: "email",
+  //       payload: e.target.value,
+  //     })
+  //   }
+
+  //   function getPassword(e){
+  //     dispatch({
+  //       type: "DATA_FETCHED",
+  //       field:"password",
+  //       payload: e.target.value,
+  //     })
+  //   }
+
   return (
     
     
-      <div className=" bg-white ">
+     <div className=" bg-white ">
         <div className="bg-white ">
           <img src={Logo} alt="" className="px-20 sm:px-6" />
         </div>
@@ -24,7 +114,7 @@ const Login = () => {
                 </p>
               </div>
 
-              <form className="flex flex-col gap-6">
+              <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
                 <div className="flex flex-col gap-2">
                   <label
                     htmlFor="email"
@@ -37,6 +127,8 @@ const Login = () => {
                     name="email"
                     id="email"
                     placeholder="Enter Email Address"
+                    value={email}
+                    onChange={getEmail}
                     className=" rounded-md px-2 w-full text-[11px] py-3 font-light"
                   />
                 </div>
@@ -45,13 +137,15 @@ const Login = () => {
                     htmlFor="pin"
                     className="text-black font-bold text-[10.2px]"
                   >
-                    Enter PIN
+                    Enter Password
                   </label>
                   <input
                     type="password"
-                    name="pin"
-                    id="pin"
-                    placeholder="Enter PIN"
+                    name="password"
+                    id="password"
+                    placeholder="Enter PASSWORD"
+                    value={password}
+                    onChange={getPassword}
                     className=" rounded-md px-2 w-full border text-[11px] py-3 font-light"
                   />
                 </div>
@@ -61,7 +155,8 @@ const Login = () => {
                   <p className="text-sm">Forgot Password?</p>
                 </div>
 
-                <button className="bg-[#2b007a] w-full p-2 rounded-md text-white text-sm flex items-center justify-center">
+                <button className="bg-[#2b007a] w-full p-2 rounded-md text-white 
+                text-sm flex items-center justify-center " >
                   Log in
                 </button>
 
@@ -69,6 +164,7 @@ const Login = () => {
                   Don't have an account?{" "}
                   <span className="text-[#2b007a]">Sign up</span>
                 </p>
+                <ToastContainer />
               </form>
             </div>
           </div>
